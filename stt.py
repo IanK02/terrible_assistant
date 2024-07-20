@@ -5,6 +5,7 @@ import google.generativeai as genai
 import keyboard
 import time
 import numpy as np
+import os
 
 '''
 This class translates the recorded audio into text
