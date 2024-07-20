@@ -18,7 +18,7 @@ class stt():
         chunk = 1600
         format = pyaudio.paInt16
         channels = 1
-        rate = 16000
+        rate = 44100
         gain = 5.0
         with wave.open(file_name, 'wb') as wf:
             p = pyaudio.PyAudio()
@@ -35,7 +35,7 @@ class stt():
                     recording = True
                     time.sleep(0.5)
                     while recording:
-                        data = stream.read(chunk)
+                        data = stream.read(chunk, exception_on_overflow=False)
                         # Convert to numpy array
                         audio_data = np.frombuffer(data, dtype=np.int16)
                         # Apply mic gain
@@ -62,7 +62,7 @@ class stt():
         #language_code can be changed to anything google has availabe on https://cloud.google.com/speech-to-text/docs/speech-to-text-supported-languages
         config = speech.RecognitionConfig(
             encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,
-            sample_rate_hertz=16000,
+            sample_rate_hertz=44100,
             language_code="en-US",
         )
 
