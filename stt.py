@@ -72,7 +72,7 @@ class stt():
     
     #method is not used, ask_gemini method in voiceai_test.py is used instead
     def _ask_gemini(self, query):
-        genai.configure(api_key="AIzaSyBhphY3CDXlaqRn3-lloBSFf-0kKBuo008")
+        genai.configure(api_key=os.getenv('API_KEY')
         model = genai.GenerativeModel('gemini-1.5-flash')
         generation_config = genai.types.GenerationConfig(
             max_output_tokens=150,
