@@ -15,3 +15,6 @@ audio functions of the assitant. The project runs on a Raspberry Pi Zero 2 W usi
 
 https://github.com/user-attachments/assets/f8bd4995-487c-4059-b0f8-4b4f7b49e3e9
 
+## Next Steps
+I want to clean up the hardware, right now it's sitting on my bedroom floor and I intend to move it to the kitchen, and also I do not want to have to plug in a keyboard to start the recording. I'm also going to experiment with Gemini AI's conversation memory feature, which would allow the personality of the
+assistant to evolve over time based on the user's prompts.
